@@ -18,7 +18,7 @@ document.getElementById("gen").addEventListener("click", function() {
   } else {
     res = "Invalid length";
   }
-  res = res.charAt(0).toUpperCase() + res.slice(1);
+  if (document.getElementById("cap").checked) res = res.charAt(0).toUpperCase() + res.slice(1);
   document.getElementById("result").innerHTML = res;
   console.log("Result: " + res);
 });
