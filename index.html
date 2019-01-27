@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Phonetic Name Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <input type="radio" name="type" value="default" id="radDefault" checked> Default - Generates a phonetic name completely randomly<br>
+  <input type="radio" name="type" value="word" id="radWord"> Word List - Generates based on a list of words.<br/>
+  <div id="wordStuff" style="display: none">
+    <input type="checkbox" id="spaced" name="spaced"> Spaced<br/>
+    <input type="checkbox" id="wordCap" name="wordCap"> Capitalize first letter of each word<br/>
+    <textarea rows="4" cols="50" placeholder="Enter a list of words seperated by whitespace (space, newline, etc.). If left empty, the english dictionary will be used instead." id="list"></textarea><br/>
+  </div>
+  <input type="checkbox" id="cap" name="cap"> Capitalize first letter of string<br/>
+  <p id=lengthText>Enter length:</p> <input type="text" name="length" id="length">
+  <button type="button" id="gen">Generate</button><br/>
+  <p>Result: <span id="result"></span></p>
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
